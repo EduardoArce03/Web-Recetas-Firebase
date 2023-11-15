@@ -1,0 +1,66 @@
+footer{
+    
+    
+    width: 100%;
+    height: 200px;
+    
+}
+
+footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(228, 221, 190);
+    height: 200px;
+    
+}
+
+/*footer .img-container {
+    width: 50px;
+    height: 50px;
+    background-image: url('media/i3.png'); /* Agrega una imagen de tu elección 
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px; 
+    padding-left: 50px;
+    padding-right: 50px;
+  }*/
+  
+ 
+  footer h3 {
+    font-size: 2.1em; 
+    margin: 0;
+     
+  }
+
+  footer .part1{
+    display: flex;
+    justify-content: flex-start;
+    font-family:'Bebas Neue', sans-serif;
+  }
+  
+
+  footer .part2 {
+    display: flex; 
+    justify-content: center;
+    background-color: black; 
+  }
+  
+
+  footer .part2 p {
+    font-size: 14px; 
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family:'Bebas Neue', sans-serif; 
+  }
+
+  footer .texto{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding-top: 15px;
+    color: rgb(139, 89, 32);
+    padding-left: 10px;
+    
+  }

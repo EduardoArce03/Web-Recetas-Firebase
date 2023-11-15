@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "webrecetas-3c561"
+  },
+  "targets": {
+    "webrecetas-3c561": {
+      "hosting": {
+        "AngularEA": [
+          "webrecetas-3c561"
+        ]
+      }
+    }
+  }
+}

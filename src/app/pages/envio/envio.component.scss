@@ -1,0 +1,161 @@
+#archivo  {
+    display: none;
+  }
+
+#Login button{
+    
+    background-color: black; 
+    color: #fff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    width: 78px; /* Ancho deseado */
+    height: 55px; /* Alto deseado */
+    margin-top: 15px;
+    font-family:'Bebas Neue', sans-serif;
+    font-size: 0.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+#Login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("https://isu.edu.mx/wp-content/uploads/2020/07/Sopes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 5px;
+    color: aliceblue;
+    font-size: 2.3em;
+
+}
+
+#Login .container{
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 5px 7px rgba(0,0,0,0.1);
+    height: 720px;
+    max-width: 900px;
+    transition: all 1s ease;
+    margin: 10px;
+}
+
+#Login .informacion{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    background-color:rgb(194, 149, 82);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Anton', sans-serif;
+    
+
+}
+
+#Login h3{
+    height: 8px;
+    font-size: 1em;
+    color: black;
+}
+
+#Login .informacion-child{
+    width: 100%;
+    padding: 0 30px;
+}
+
+#Login .informacion-child h1{
+    font-size: 1.4em;
+}
+
+#Login .informacion-child p{
+    margin: 15px 0;
+    font-size: 0.7em;
+}
+
+#Login .container-form{
+    background-color: white;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+
+}
+
+#Login .container-form-child{
+    
+    padding: 0 30px;
+    color: black;
+
+}
+
+#Login .container-form-child{
+    
+    color: black;
+    justify-content: flex-start;
+    
+
+}
+
+#Login form{
+    padding: 10px;
+}
+
+#Login form label{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    font-size: 0.5em;
+    background-color: rgb(228, 221, 190);
+}
+
+#Login input[type="text"]{
+    display: flex;
+    padding: 2px;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    border: 2px solid #ccc;
+    outline: none;
+    border-radius: 20px;
+    color: #333;
+    box-shadow: (0,0,0,0.2);
+    width: 300px; /* Ancho deseado */
+    height: 30px; /* Alto deseado */
+    
+}
+
+
+
+
+#Login button:hover {
+    background-color: rgb(194, 149, 82); 
+  }
+
+  /* Oculta el campo de entrada de archivo */
+
+  
+  /* Estilo personalizado para el botón o etiqueta */
+  .boton-personalizado {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  

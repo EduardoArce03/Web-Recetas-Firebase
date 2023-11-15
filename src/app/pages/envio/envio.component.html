@@ -1,0 +1,37 @@
+<section id="Login">
+    <div class="container">
+        <div class="informacion">
+            <div class="informacion-child">
+                <h1>Bienvenido </h1>
+                <p>Acercate mas hacia la cocina</p>
+            </div>
+        </div>
+            <div class="container-form">
+                <h3>Ingresa tu receta !</h3>               
+                <div class="container-form-child">
+                    <form action="" name="Receta" id="form" >
+                        <label for="Cedula">Cedula del emitente</label>
+                        <input type="text" id="cedula" name="cedula" [(ngModel)]="receta.id" required>
+
+                        <label for="nombreReceta">Nombre de la receta</label>
+                        <input type="text" id="nombreReceta" name="nombreReceta" [(ngModel)]="receta.nombre" required/>
+
+                        <label for="ingredientes">Ingredientes</label>
+                        <input type="text" id="ingredientes" name="Ingredientes" [(ngModel)]="receta.ingredientes" required>
+
+                        <label for="pasos">Pasos</label>
+                        <input type="text" id="pasos" name="Pasos" [(ngModel)]="receta.pasos" required>
+
+
+
+                        <button (click)="camposVacios();saveReceta()" class="enviar">Enviar</button>
+                        <button (click)="goReceta()" class="mirar">Mirar Receta</button>
+                        <button (click)="irReceta(receta.id)">Mirar</button>
+                        <p class="err" id="err" *ngIf="showError" style="font-size: 0.8em; color: red;">Por favor, complete todos los campos.</p>
+
+                    </form>
+                </div>
+            </div>
+        
+    </div>
+</section>       
