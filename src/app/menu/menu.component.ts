@@ -10,8 +10,7 @@ export class MenuComponent {
     {titulo: 'Inicio', path: 'paginas/inicio'},
     {titulo: 'Recetas', path: 'paginas/recetas'},
     {titulo: 'Sobre Nosotros', path: 'paginas/sobre'},
-    {titulo: 'Envia tu Receta', path: 'paginas/envio'},
-    {titulo: 'View', path: 'paginas/view'}
+    {titulo: 'Envia tu Receta', path: 'paginas/envio'}
   ]
 
 }

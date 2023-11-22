@@ -4,7 +4,6 @@ import { Receta } from 'src/app/domain/receta';
 import { RecetasService } from 'src/app/services/recetas.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ContactosFirebase } from 'src/app/services/contactos-firebase';
-import { ViewRecetaComponent } from '../view-receta/view-receta.component';
 
 
 
@@ -19,7 +18,7 @@ export class EnvioComponent {
   showError = false;
   
 
-  constructor(private router: Router, private recetaService: RecetasService, private formBuilder : FormBuilder, private contactoFirebase : ContactosFirebase, private viewReceta: ViewRecetaComponent){
+  constructor(private router: Router, private recetaService: RecetasService, private formBuilder : FormBuilder, private contactoFirebase : ContactosFirebase){
     let params = this.router.getCurrentNavigation()?.extras.queryParams;
     if(params){
       console.log(params)
@@ -39,7 +38,6 @@ export class EnvioComponent {
     this.recetaService.addReceta(this.receta);
     this.contactoFirebase.save(this.receta)
     this.receta = new Receta();
-    
     console.log(this.recetaService.getRecetas());
     
     if(this.camposVacios()){
@@ -63,10 +61,6 @@ export class EnvioComponent {
 
   camposVacios(): boolean {
     return !this.receta.id || !this.receta.nombre || !this.receta.ingredientes || !this.receta.pasos;
-  }
-
-  irReceta(uid: string){
-    //this.viewReceta.loadPersona(uid)
   }
 
 

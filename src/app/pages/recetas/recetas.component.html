@@ -1,19 +1,18 @@
 
 <div class="lista-recetas">
-    <h2>RecetasXD</h2>
+    <h2>Recetas</h2>
     <div class="recetas-container">
-      <div *ngFor="let receta of recetas" class="receta">
-        <div class="imagen-receta" style="background-image: url('urlInput');">
-          <img [src]='urlInput' alt="imgxd" style="display: none;">
+      <div *ngFor="let receta of listaRecetas |async"  class="receta">
+        <div class="imagen-receta" style="background-image: url('assets/i1.jpg');">
+          <img src='assets/{{url}}' alt="imgxd" style="display: none;">
         </div>
         <div class="informacion-receta">
           <h3>{{ receta.nombre }}</h3>
           <p><strong>Ingredientes:</strong> {{ receta.ingredientes }}</p>
           <p><strong>Pasos:</strong> {{ receta.pasos }}</p>
           <input type="file"  accept="image/*" id="archivo" #img>
-          <label for="urlInput">URL de imagen</label>
-          <input type="text" [(ngModel)]="urlInput">
-          <button >Enviar imagen</button>
+          <label for="archivo" class="boton-personalizado">Seleccionar Imagen</label>
+          <button (click)="onImg(img.files)">Enviar imagen</button>
         </div>
       </div>
     </div>

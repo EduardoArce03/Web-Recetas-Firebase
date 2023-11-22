@@ -12,12 +12,14 @@ import { RecetasService } from 'src/app/services/recetas.service';
 export class RecetasComponent {
   recetas : Receta [] = []
   url : any
-  urlInput: string = '';
+
+  listaRecetas : any
   
 
   constructor(private recetaService : RecetasService,
     private router: Router, private contactosFirebase : ContactosFirebase){
       this.recetas = recetaService.getRecetas()
+      this.listaRecetas = this.contactosFirebase.getAll()
   }
 
   goLista(){

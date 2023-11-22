@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { enviroment } from 'src/enviroment/enviroment';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-import { ViewRecetaComponent } from './pages/view-receta/view-receta.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -32,7 +32,6 @@ import { ViewRecetaComponent } from './pages/view-receta/view-receta.component';
     MenuComponent,
     SobreComponent,
     EnvioComponent,
-    ViewRecetaComponent,
     
     
     
@@ -45,10 +44,16 @@ import { ViewRecetaComponent } from './pages/view-receta/view-receta.component';
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(enviroment.firebaseConfig)),
     provideFirestore(() => getFirestore()),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
     
     
   ],
-  providers: [ViewRecetaComponent, {provide: FIREBASE_OPTIONS, useValue: enviroment.firebaseConfig}],
+  providers: [{provide: FIREBASE_OPTIONS, useValue: enviroment.firebaseConfig}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

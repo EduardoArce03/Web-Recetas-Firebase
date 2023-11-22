@@ -20,12 +20,12 @@ export class ContactosFirebase {
     }
 
     save(receta: Receta){
-        const uid = receta.nombre
-        return this.recetasRef.doc(uid).set(Object.assign({}, receta))
+        const uid = this.db.createId()
+        receta.uid = uid;
+        this.recetasRef.doc(uid).set(Object.assign({}, receta))
     }
 
-    getReceta(uid:string){
-        console.log('uid' + uid)
+    getRecetaFire(uid :string){
         return this.db.doc(this.path+'/'+uid).valueChanges()
     }
 
